@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* In your global CSS file */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.animate-typing {
+  width: 0;
+  animation: typing 2s steps(20, end) forwards;
+}
+
+canvas{
+    height: 100vh !important;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.beating-heart {
+  display: inline-block;
+  animation: beat 1s infinite;
+  transform-origin: center;
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+}
+
+
